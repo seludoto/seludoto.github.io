@@ -1,0 +1,25 @@
+:root{
+  --container: 1024px;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;margin:0;color:var(--text, #0f172a);}
+.container{max-width:var(--container);margin:0 auto;padding:2rem}
+.site-header{background:linear-gradient(90deg,#0f172a,#1e293b);color:white;padding:0.75rem 0}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:700}
+.nav a{color:rgba(255,255,255,0.8);margin-left:1rem;text-decoration:none}
+.hero{padding:4rem 0}
+.hero-grid{display:grid;grid-template-columns:1fr 280px;gap:2rem;align-items:center}
+.hero-title{font-size:2.25rem;margin:0}
+.btn{display:inline-block;background:#0f172a;color:white;padding:0.6rem 1rem;border-radius:6px;text-decoration:none}
+.hero-card img{width:100%;border-radius:8px}
+.about{padding:2rem 0}
+.projects{padding:2rem 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.card{border:1px solid #e6e9ee;padding:1rem;border-radius:8px}
+.contact{padding:2rem 0}
+.site-footer{border-top:1px solid #e6e9ee;padding:1rem 0;text-align:center}
+@media(max-width:700px){
+  .hero-grid{grid-template-columns:1fr;}
+  .header-inner{padding:0 1rem}
+}

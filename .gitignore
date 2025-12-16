@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.env
+.DS_Store
+.vscode/
+.idea/
+.npm/
+package-lock.json
+.env.local
+
+#Ignore vscode AI rules
+.github\instructions\codacy.instructions.md
