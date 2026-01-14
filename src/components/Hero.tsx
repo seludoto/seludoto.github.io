@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function Hero() {
+  const [imageError, setImageError] = useState(false)
+
   return (
     <section className="hero container">
       <div className="hero-grid">
@@ -23,7 +25,29 @@ export default function Hero() {
           </div>
         </div>
         <div className="hero-card">
-          <img src="/avatar.png" alt="Dolese Avatar" />
+          {imageError ? (
+            <div style={{ 
+              width: '100%', 
+              height: '280px', 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center',
+              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+              borderRadius: '8px',
+              fontSize: '6rem'
+            }}>
+              👨‍💻
+            </div>
+          ) : (
+            <img 
+              src="/avatar.png" 
+              alt="Dolese Avatar" 
+              onError={() => {
+                console.warn('Avatar image failed to load, using fallback')
+                setImageError(true)
+              }}
+            />
+          )}
         </div>
       </div>
     </section>
