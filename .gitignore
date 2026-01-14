@@ -5,7 +5,6 @@ dist/
 .vscode/
 .idea/
 .npm/
-package-lock.json
 .env.local
 
 #Ignore vscode AI rules
