@@ -25,25 +25,7 @@ export default function Hero() {
           </div>
         </div>
         <div className="hero-card">
-          {!imageError ? (
-            <img 
-              src="/avatar.png" 
-              alt="Dolese Avatar" 
-              onError={() => setImageError(true)}
-            />
-          ) : (
-            <div style={{ 
-              width: '100%', 
-              height: '280px', 
-              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-              borderRadius: '8px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '80px'
-            }}>
-              👨‍💻
-            </div>
+
           )}
         </div>
       </div>
